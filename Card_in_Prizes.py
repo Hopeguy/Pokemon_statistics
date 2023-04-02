@@ -39,11 +39,11 @@ class Deck():
 
 
 def main():
-    global Result_list
+    global df
     start = time.time()
     Result_list = []
     for card_quantity in range(4):
-        Test_size = 10000 #number of times the test is run
+        Test_size = 1000 #number of times the test is run
         Result = np.zeros(Test_size, dtype=int)
         deck_size = 60
         Specific_card_quantity = card_quantity +1
@@ -58,15 +58,16 @@ def main():
         #checks how many of the specific card that ended up in the prizes    
         number_times_in_prizes = np.zeros(card_quantity+1)
         for index, i in enumerate(number_times_in_prizes):
-            number_times_in_prizes[index] = (np.count_nonzero(Result >= index + 1)/Test_size)
+            number_times_in_prizes[index] = (np.count_nonzero(Result >= index + 1)/Test_size)*100
 
         Result_list.append(number_times_in_prizes)
         #print(f'Percentage times card is in prizes {(number_times_in_prizes/Test_size)*100} %')
     
-    df = pd.DataFrame(Result_list, columns=["1","2","3","4"], index = ["1","2","3","4"])
+    df = pd.DataFrame(Result_list, columns=["1 copy","2 copies","3 copies","4 copies"], index = ["1","2","3","4"])
     df  = df.fillna(0)
     print(df)
-    fig = px.bar(df, text_auto = True)
+    fig = px.bar(df, text_auto = True, title = "Chance of card being in prizes %", 
+                labels = {"'1 copy', '2 copies', '3 copies', '4 copies'": "Cards in deck"})
     
     fig.show()
 
