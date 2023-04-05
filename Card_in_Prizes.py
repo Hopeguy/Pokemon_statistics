@@ -40,7 +40,7 @@ class Deck():
 
 def main():
     global df
-    start = time.time()
+    start = time.perf_counter()
     Result_list = []
     for card_quantity in range(4):
         Test_size = 1000 #number of times the test is run
@@ -63,15 +63,16 @@ def main():
         Result_list.append(number_times_in_prizes)
         #print(f'Percentage times card is in prizes {(number_times_in_prizes/Test_size)*100} %')
     
-    df = pd.DataFrame(Result_list, columns=["1 copy","2 copies","3 copies","4 copies"], index = ["1","2","3","4"])
+    df = pd.DataFrame(Result_list, columns=["1 copy in deck","2 copies in deck","3 copies in deck","4 copies in deck"], index = ["1","2","3","4"])
     df  = df.fillna(0)
     print(df)
     fig = px.bar(df, text_auto = True, title = "Chance of card being in prizes %", 
                 labels = {"'1 copy', '2 copies', '3 copies', '4 copies'": "Cards in deck"})
-    
+    fig.update_xaxes(title="Card/s in prizes")
+    fig.write_html("change-of-cards-in-prizes.html")
     fig.show()
-
-    end = time.time()
+    
+    end = time.perf_counter()
     print(f'Runtime: {end-start} seconds')
 
 
