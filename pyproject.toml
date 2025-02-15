@@ -1,0 +1,8 @@
+[tool.ruff]
+line-length = 78  # Set max line length for code
+target-version = "py311" 
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
