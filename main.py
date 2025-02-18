@@ -1,9 +1,11 @@
 import random
+import re
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import plotly.express as px
+import seaborn as sns
 import streamlit as st
 
 import sim_turnament as sim
@@ -58,12 +60,15 @@ def main():
     st.header("Pokemon Statistics")
     # Calculats chanes of cards being in prizes
 
-    cards_in_prizes_tab, Supp_tab, turnament_tab = st.tabs(
-        [
-            "Cards in prize",
-            "Chanes of starting with a supporter in hand",
-            "turnament simulation",
-        ]
+    cards_in_prizes_tab, Supp_tab, turnament_tab, turnament_data_tab = (
+        st.tabs(
+            [
+                "Cards in prize",
+                "Chanes of starting with a supporter in hand",
+                "turnament simulation",
+                "turnament data",
+            ]
+        )
     )
 
     with cards_in_prizes_tab:
@@ -264,6 +269,31 @@ def main():
 
             # plot the proportional deck usages to points
             sim.plot_winnings_proportions(players, inputs)
+
+    with turnament_data_tab:
+        st.title("Deck Performance Analysis")
+
+        # Step 1: Load and filter match data
+        df_filtered = sim.load_and_filter_data()
+
+        # Step 2: Load deck data
+        df_decks = sim.load_deck_data()
+
+        # Step 3: Merge deck data with match data
+        df_filtered = sim.merge_decks_with_matches(df_filtered, df_decks)
+
+        # Step 4: Calculate match outcomes
+        df_matches = sim.calculate_match_outcomes(df_filtered)
+
+        # Step 5: Aggregate performance data
+        df_performance = sim.aggregate_performance_data(df_matches)
+
+        # Show the performance data
+        st.subheader("Performance Data")
+        st.dataframe(df_performance)
+
+        # Step 6: Plot the performance data
+        sim.plot_performance_data(df_performance)
 
 
 if __name__ == "__main__":

@@ -2,6 +2,8 @@ import csv
 import random
 
 import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
 import streamlit as st
 
 
@@ -169,3 +171,194 @@ def plot_winnings_proportions(players, inputs):
 
     # Display the plot in Streamlit
     st.pyplot(fig)
+
+
+# Step 1: Load the data and process player matches
+def load_and_filter_data():
+    # Load the matches data
+    df = pd.read_csv(
+        "data_usa_turnament.csv",
+        delimiter="\t",
+        header=None,
+        names=["Player1", "Player2", "Result", "Points", "Round"],
+    )
+
+    # Clean player names and extract country codes
+    df["Player1_Country"] = df["Player1"].str.extract(r"\[(..)\]")
+    df["Player1"] = df["Player1"].str.replace(r" \[..\]", "", regex=True)
+
+    df["Player2_Country"] = df["Player2"].str.extract(r"\[(..)\]")
+    df["Player2"] = df["Player2"].str.replace(r" \[..\]", "", regex=True)
+
+    # Filter rows where player1 played more than 8 rounds
+    filtered_rows = []  # Store rows that should be kept
+    current_player = None
+    player_rows = []  # Temporarily store each player's rows
+    played_above_8 = False  # Track if the player has a round > 8
+
+    for index, row in df.iterrows():
+        if row["Player1"] != current_player:  # New player detected
+            if (
+                played_above_8
+            ):  # Keep previous player's rows if they played >8 rounds
+                filtered_rows.extend(player_rows)
+
+            # Reset for the new player
+            current_player = row["Player1"]
+            player_rows = []
+            played_above_8 = False
+
+        # Store row and check if they played > 8 rounds
+        player_rows.append(row)
+        if row["Round"] > 8:
+            played_above_8 = True
+
+    if played_above_8:
+        filtered_rows.extend(player_rows)
+
+    df_filtered = pd.DataFrame(filtered_rows, columns=df.columns)
+
+    return df_filtered
+
+
+# Step 2: Load decks data
+def load_deck_data():
+    txt_file = "decks_players.txt"
+    players_data = []
+
+    with open(txt_file, "r", encoding="utf-8") as file:
+        lines = file.readlines()
+
+    i = 1
+    while i < len(lines):
+        if lines[i].strip().isdigit():  # Skip ranking numbers
+            i += 1
+            continue
+
+        player_name = lines[i].strip()
+        country = lines[i + 1].strip() if (i + 1) < len(lines) else ""
+        deck = (
+            lines[i + 2].strip()
+            if (i + 2) < len(lines) and lines[i + 2].strip()
+            else None
+        )
+
+        players_data.append([player_name, country, deck])
+        i += 3  # Move to the next player's data
+
+    df_decks = pd.DataFrame(
+        players_data, columns=["Player", "Country", "Deck"]
+    )
+
+    return df_decks
+
+
+# Step 3: Merge and clean data
+def merge_decks_with_matches(df_filtered, df_decks):
+    # Merge the decks with df_filtered on Player1
+    df_filtered = df_filtered.merge(
+        df_decks, left_on="Player1", right_on="Player", how="left"
+    )
+
+    # Drop the duplicate "Player" column
+    df_filtered.drop(columns=["Player"], inplace=True)
+
+    # Remove players without decks and matches where one player is invalid
+    players_with_decks = df_filtered.dropna(
+        subset=["Deck"]
+    )  # Keep only players with a deck
+    valid_players = set(players_with_decks["Player1"])
+
+    df_filtered = df_filtered[
+        df_filtered["Player1"].isin(valid_players)
+        & df_filtered["Player2"].isin(valid_players)
+    ]
+
+    return df_filtered
+
+
+# Step 4: Calculate match outcomes
+def calculate_match_outcomes(df_filtered):
+    df_filtered["MatchKey"] = df_filtered.apply(
+        lambda row: tuple(sorted([row["Player1"], row["Player2"]])),
+        axis=1,
+    )
+
+    # Keep only one instance of each match
+    df_matches = df_filtered.drop_duplicates(subset="MatchKey").copy()
+    df_matches.rename(columns={"Deck": "Deck1"}, inplace=True)
+
+    # Merge Deck2 from Player2
+    df_matches = df_matches.merge(
+        df_filtered[["Player1", "Deck"]],
+        left_on="Player2",
+        right_on="Player1",
+        how="left",
+    )
+    df_matches.rename(columns={"Deck": "Deck2"}, inplace=True)
+
+    # Determine win/loss/tie outcome
+    df_matches["Result"] = df_matches["Result"].fillna("T")
+    df_matches["Win"] = (df_matches["Result"] == "W").astype(int)
+    df_matches["Loss"] = (df_matches["Result"] == "L").astype(int)
+    df_matches["Tie"] = (df_matches["Result"] == "T").astype(int)
+
+    df_matches.dropna(subset=["Deck1", "Deck2"], inplace=True)
+
+    return df_matches
+
+
+# Step 5: Aggregate performance data
+def aggregate_performance_data(df_matches):
+    df_performance = (
+        df_matches.groupby(["Deck1", "Deck2"])
+        .agg(Wins=("Win", "sum"), Losses=("Loss", "sum"), Ties=("Tie", "sum"))
+        .reset_index()
+    )
+    return df_performance
+
+
+# Step 6: Visualize Data using Streamlit
+def plot_performance_data(df_performance):
+    # Step 1: Calculate the win percentage for each matchup
+    df_performance["Win_Percentage"] = (
+        df_performance["Wins"]
+        / (
+            df_performance["Wins"]
+            + df_performance["Losses"]
+            + df_performance["Ties"]
+        )
+        * 100
+    )
+
+    # Round the win percentages to integers and handle NaN values
+    df_performance["Win_Percentage"] = (
+        df_performance["Win_Percentage"].fillna(0).round(0).astype(int)
+    )
+
+    # Step 2: Create a pivot table to structure the data for plotting
+    df_pivot = df_performance.pivot_table(
+        index="Deck1",
+        columns="Deck2",
+        values="Win_Percentage",
+        aggfunc="mean",
+        fill_value=0,  # fill missing values with 0
+    )
+
+    # Ensure that the pivoted table is in integer format
+    df_pivot = df_pivot.astype(int)
+
+    st.dataframe(df_pivot)  # Display the pivot table in Streamlit
+
+    # Step 3: Plot the heatmap for win percentages
+    plt.figure(figsize=(12, 8))
+    sns.heatmap(
+        df_pivot,
+        annot=True,  # Annotate the heatmap with the values
+        cmap="Blues",  # Choose color map
+        fmt="d",  # Format the values as integers
+        linewidths=0.5,  # Add a small border between cells
+        cbar=True,  # Show the color bar
+    )
+    plt.title("Deck Match Win Percentage")
+    st.pyplot(plt)  # Display the heatmap in Streamlit

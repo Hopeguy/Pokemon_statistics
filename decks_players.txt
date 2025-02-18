@@ -1,0 +1,737 @@
+#	Player	Country	Deck	List
+1	
+Azul Garcia Griego
+US	
+miraidon
+2	
+Mauricio Patino
+US	
+gouging-fire
+3	
+Leandro Fernandes
+BR	
+miraidon
+4	
+Rolando Gabriel Coronado Jimenez
+MX	
+klawfterapagos
+5	
+Aidan Khus
+US	
+dragapultdusknoir
+6	
+Rafael Yuiti
+BR	
+miraidon
+7	
+Michael Davidson
+US	
+gardevoir
+8	
+Caleb Rogerson
+US	
+miraidon
+9	
+Brent Tonisson
+AU	
+dragapultdusknoir
+10	
+Steven Salas Cajina
+CR	
+dragapultdusknoir
+11	
+Arath Gomez
+MX	
+dragapultdusknoir
+12	
+Diego Cassiraga
+AR	
+dragapultdusknoir
+13	
+Caleb Gedemer
+US	
+miraidon
+14	
+Jose Merced
+MX	
+iron-thorns
+15	
+Jack Moore
+CA	
+gardevoir
+16	
+Calvin Connor
+US	
+gardevoir
+17	
+Eder Jarillo Soto
+MX	
+lugiaarcheops
+18	
+Andrew Hedrick
+US	
+comfeysableye
+19	
+Sotero De Jesus De Dios Gonzalez
+MX	
+dragapultdusknoir
+20	
+Gabriel Smart
+US	
+gardevoir
+21	
+Omar Alejandro Suarez Gurrola
+MX	
+raging-boltogerpon
+22	
+Pedro Pertusi
+BR	
+miraidon
+23	
+Alberto Bonsanto
+MX	
+lugiaarcheops
+24	
+Jaime Riva
+MX	
+miraidon
+25	
+Victor de Velasco
+MX	
+lugiaarcheops
+26	
+Cesar David Alvarado Martínez
+MX	
+gardevoir
+27	
+Eliseo Vazquez
+MX	
+miraidon
+28	
+Pablo Meza
+MX	
+pidgeot
+29	
+Shane McManus
+US	
+lugiaarcheops
+30	
+Cameron Scotland
+US	
+gardevoir
+31	
+Michael Ingalls
+US	
+lugiaarcheops
+32	
+Enrique Saenz
+MX	
+gardevoir
+33	
+David Perez Concha
+MX	
+gholdengo
+34	
+Maddox Corcoran
+US	
+miraidon
+35	
+Francisco Hernandez
+MX	
+dragapultdusknoir
+36	
+Adrian Mejia Galvez
+MX	
+pidgeot
+37	
+Tanner Hurley
+US	
+gardevoir
+38	
+Fabrizio Inga Silva
+PE	
+miraidon
+39	
+Luis Guillermo Terreros Rosales
+MX	
+archaludon
+40	
+Manuel Alejandro Canul Basto
+MX	
+roaring-moonflutter-mane
+41	
+Joshua Frink
+US	
+gardevoir
+42	
+Jonathan Eduardo Martinez Aguilar
+MX	
+gardevoir
+43	
+Bryan Gabriel Torres Meléndez
+MX	
+dragapultdusknoir
+44	
+Diego Coronado
+MX	
+archaludon
+45	
+Raul Merino
+MX	
+miraidon
+46	
+Piper Lepine
+US	
+gardevoir
+47	
+Miguel Angel Lopez Bernal
+MX	
+lugiaarcheops
+48	
+Gilberto Madrid Gutiérrez
+MX	
+gardevoir
+49	
+Diego Carrillo
+MX	
+gardevoir
+50	
+Francisco Rocha
+MX	
+lugiaarcheops
+51	
+Angel Daniel
+MX	
+raging-boltogerpon
+52	
+Andre Bortoni Miranda
+BR	
+miraidon
+53	
+Joshua Sanchez
+CR	
+lugiaarcheops
+54	
+Fernando Elias Vega
+MX	
+regidrago
+55	
+Justin Turner
+US	
+gardevoir
+56	
+Carlos Medina Astete
+PE	
+snorlax
+57	
+Andres Estefano Gajardo Lopehandia
+CL	
+lugiaarcheops
+58	
+Alexis Vazquez
+MX	
+dragapultdusknoir
+59	
+Maximus López
+MX	
+snorlax
+60	
+Jesús Mejia
+MX	
+lugiaarcheops
+61	
+Raul Soberano Alpuche
+MX	
+raging-boltogerpon
+62	
+Mauricio Santoveña
+MX	
+ceruledge
+63	
+Ali Uzziel Monroy Rodriguez
+MX	
+raging-boltogerpon
+64	
+Jose Lagunes Maitret
+MX	
+dragapultdusknoir
+65	
+Ciaran Farah
+CA	
+lugiaarcheops
+66	
+Pablo Jesús López Salcido
+MX	
+lugiaarcheops
+67	
+Rodrigo Segovia
+MX	
+archaludon
+68	
+Pablo Gonzalez
+MX	
+archaludon
+69	
+Jose Daniel Sandoval Rios
+MX	
+gholdengo
+70	
+Francisco Bernard
+CR	
+dragapultdusknoir
+71	
+Roberto Barrera
+MX	
+ceruledge
+72	
+Pedro Alberto Uc Kuituc
+MX	
+gardevoir
+73	
+Gabriel Pérez Centeno
+MX	
+dragapultdusknoir
+74	
+Jorge Arteaga
+US	
+miraidon
+75	
+Armando Adame
+MX	
+raging-boltogerpon
+76	
+Howie Rylant
+US	
+gholdengo
+77	
+Luis Gerardo Oliva Hernández
+MX	
+miraidon
+78	
+Agustín Herrera Garcia
+MX	
+terapagosnoctowl
+79	
+Yalevo Jimenez
+MX	
+dragapultcharizard
+80	
+Stephen Scicluna
+CA	
+archaludon
+81	
+Adrián Castellanos
+MX	
+charizardpidgeot
+82	
+Martín Rodríguez
+MX	
+raging-boltogerpon
+83	
+Ioannis Rodrigo García López
+MX	
+iron-handsiron-crown
+84	
+Alejandro Sanchez
+MX	
+charizardpidgeot
+85	
+Diego Saul Santos Viguerias
+MX	
+raging-boltogerpon
+86	
+Naim Legñar
+MX	
+lugiaarcheops
+87	
+Juan Espinola
+MX	
+gardevoir
+88	
+Jonathan Lupercio
+US	
+lugiaarcheops
+89	
+Abraham Lomeli
+MX	
+klawfterapagos
+90	
+Jesus Enrique Cervera Novelo
+MX	
+ceruledge
+91	
+Domingo Obed Espejel Jimenez
+MX	
+dragapultdusknoir
+92	
+Alberto Gil
+MX	
+dragapultdusknoir
+93	
+Raul Rodriguez
+MX	
+dragapultdusknoir
+94	
+Jessen Mercado
+MX	
+dragapultcharizard
+95	
+Christian Cruz Esquivel
+MX	
+gardevoir
+96	
+Hector Romeo Vázquez Sánchez
+MX	
+lugiaarcheops
+97	
+Ruben Alejandro Canul Mendoza
+MX	
+lugiaarcheops
+98	
+Pablo Nuñez
+MX	
+miraidon
+99	
+Miguel Angel Guemez
+MX	
+gardevoir
+100	
+Dennis Peroff
+CA	
+gardevoir
+101	
+Yona Elanai Valle Cadena
+MX	
+dragapultdusknoir
+102	
+Oliver Rochin Montijo
+MX	
+lugiaarcheops
+103	
+Manuel Alejandro Cervantes
+MX	
+lugiaarcheops
+104	
+Omar Corro
+MX	
+ceruledge
+105	
+Irbin Aaron Sánchez García
+MX	
+dragapultdusknoir
+106	
+Emiliano Zapata
+MX	
+raging-boltogerpon
+107	
+Juan Ortega
+MX	
+snorlax
+108	
+Kevin Tovar
+MX	
+raging-boltogerpon
+109	
+Mauricio Loredo Del Castillo
+MX	
+lugiaarcheops
+110	
+Samir Moises Acevedo Jauregui
+MX	
+gardevoir
+111	
+Owen Dalgard
+US	
+miraidon
+112	
+Candido Daniel Ferrer Sandoval
+MX	
+gardevoir
+113	
+Jorge Lopez
+MX	
+archaludon
+114	
+Aarón Maldonado Lezama
+MX	
+lugiaarcheops
+115	
+Aaron Misael Cordova Cardenas
+MX	
+dragapult
+116	
+Gabriel Reyes
+MX	
+raging-boltogerpon
+117	
+Mauricio Salas
+MX	
+lugiaarcheops
+118	
+Miguel Alejandro Hernández García
+MX	
+snorlax
+119	
+Mauricio Serrano Ramirez
+MX	
+lugiaarcheops
+120	
+Oscar Bojorquez
+MX	
+dragapultdusknoir
+121	
+Israel Guadalupe Garcia Belmares
+MX	
+raging-boltogerpon
+122	
+Jorge Ricardo Hernandez Torres
+MX	
+gardevoir
+123	
+Daniel Teran
+MX	
+raging-boltogerpon
+124	
+Michael Natto
+US	
+lugiaarcheops
+125	
+Manuel V Zuñiga
+MX	
+archaludon
+126	
+Martin Viruete
+MX	
+klawfterapagos
+127	
+Jorge Isaac Rodríguez González
+MX	
+charizardpidgeot
+128	
+Angel Balam
+MX	
+dragapultdusknoir
+129	
+Luis Rodrigo Murguia Zamudio
+MX	
+lugiaarcheops
+130	
+Victor Manuel Garcia Montes
+MX	
+gardevoir
+131	
+Jonathan Fabrizio Bellucci Lanciano
+AR	
+lugiaarcheops
+132	
+Diego García Rueda
+MX	
+gardevoir
+133	
+Pablo Figueroa
+MX	
+dragapultdusknoir
+134	
+Pablo Martinez
+MX	
+raging-boltogerpon
+135	
+Felix Salinas
+MX	
+ceruledge
+136	
+Carlos Alberto Ruiz Castrejón
+MX	
+regidrago
+137	
+Axel Salazar
+MX	
+lugiaarcheops
+138	
+Daniel Espinoza
+MX	
+gardevoir
+139	
+Jesus Raul Jimenez Tufiño
+MX	
+dragapultdusknoir
+140	
+Mario Humberto Ramírez Lio
+MX	
+lugiaarcheops
+141	
+Luis Angel Aguilar Cruz
+MX	
+lugiaarcheops
+142	
+Joel Bergman
+CA	
+lugiaarcheops
+143	
+Rogelio Espinoza
+MX	
+regidrago
+144	
+Jose Orihuela
+MX	
+gholdengo
+145	
+Ivan Rafael Sanchez Vargas
+MX	
+dragapultdusknoir
+146	
+Ermilo Magana
+MX	
+raging-boltogerpon
+147	
+Alejandro García Moreno
+MX	
+gardevoir
+148	
+Carlos Feria
+MX	
+archaludon
+149	
+Aldo Figueroa
+MX	
+dragapultdusknoir
+150	
+Ervin Osorio
+MX	
+gardevoir
+151	
+Diego Pacheco
+MX	
+dragapultdusknoir
+152	
+Guillermo Barrios
+MX	
+dragapultdusknoir
+153	
+Frida Adalid Morales Oropeza
+MX	
+archaludon
+154	
+Juan Pablo De Los Santos Ochoa
+MX	
+dragapultdusknoir
+155	
+Edwin Barrera
+MX	
+dragapultcharizard
+156	
+Guillermo Villicaña Santillan
+MX	
+raging-boltogerpon
+157	
+Rafael Aldair Zepeda Rodriguez
+MX	
+snorlax
+158	
+Ricardo Ramírez Villagran
+MX	
+gardevoir
+159	
+Raúl González Sandoval
+MX	
+gardevoir
+160	
+Alberto Meza
+MX	
+archaludondialga-origin
+161	
+Javier Andrés Gongora Ojeda
+MX	
+dragapultdusknoir
+162	
+Emiliano Huang
+MX	
+palkia-origindusknoir
+163	
+Jesus Vazquez
+MX	
+raging-boltogerpon
+164	
+Yasser Moreno
+MX	
+miraidon
+165	
+Carlos Emilio Sanchez Zilli
+MX	
+lugiaarcheops
+166	
+Franco De Crescenzo
+MX	
+miraidon
+167	
+Jose Juarez Gonzalez
+MX	
+dragapultdusknoir
+168	
+Ever Gamboa Silveira
+MX	
+dragapultdusknoir
+169	
+Jason Burch
+US	
+miraidon
+170	
+Jonhathan Vazquez
+MX	
+gardevoir
+171	
+Brandon Vera
+MX	
+miraidon
+172	
+Roberto Concepcion Parra Rodriguez
+MX	
+gardevoir
+173	
+Gerardo Morales
+MX	
+gardevoir
+174	
+Jesús Felipe Cepeda Noriega
+MX	
+gardevoir
+175	
+Josue Rodrigo Ramos Hernández
+MX	
+charizardpidgeot
+176	
+Arturo Ortega
+MX	
+terapagossylveon
+177	
+Gilberto De Luna
+MX	
+klawfterapagos
+178	
+Daniel Alberto Pintado Mejia
+MX	
+dragapultdusknoir
+179	
+Rafael Jerónimo Chávez
+MX	
+dragapultdusknoir
+180	
+Carlos Irigoyen
+MX	
+lugiaarcheops
+181	
+Gustavo Canto
+MX	
+lugiaarcheops
+182	
+Luismi Alcocer
+MX	
+miraidon
+183	
+Benjamin Ruiz
+MX	
+dragapultdusknoir
+184	
+Elaine Zapata
+MX	
+dragapultcharizard
